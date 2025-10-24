@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact, FaJsSquare, FaCss3 } from "react-icons/fa";
+import { FaReact, FaJsSquare, FaCss3, FaHtml5, FaPhp, FaPython, FaDatabase, FaRobot, FaBrain } from "react-icons/fa";
 
 const Skills = () => {
     return (
@@ -10,7 +10,12 @@ const Skills = () => {
                     <li><FaReact /> ReactJS</li>
                     <li><FaJsSquare /> JavaScript</li>
                     <li><FaCss3 /> CSS</li>
-                    {/* Add more skills later */}
+                    <li><FaHtml5 /> HTML5</li>
+                    <li><FaPhp /> PHP</li>
+                    <li><FaPython /> Python</li>
+                    <li><FaDatabase /> SQL Database</li>
+                    <li><FaRobot /> AI</li>
+                    <li><FaBrain /> Machine Learning</li>
                 </ul>
             </div>
         </section>

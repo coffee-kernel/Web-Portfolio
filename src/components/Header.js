@@ -1,30 +1,36 @@
-import React from "react";
-import { Link } from "react-scroll";
+import React, { useState } from 'react';
+import { Link } from 'react-scroll'; // For smooth scrolling
+import { FaBars, FaTimes } from 'react-icons/fa'; // Hamburger icons
 
 const Header = () => {
-    return (
-        <header className="header">
-            <nav className="nav">
-                <div className="logo">
-                    <h2>Hello! I'm Joshua</h2>
-                </div>
-                <ul className="nav-links">
-                    <li>
-                        <Link to="about" smooth={true} duration={500}>About Me</Link>
-                    </li>
-                    <li>
-                        <Link to="projects" smooth={true} duration={500}>Projects</Link>
-                    </li>
-                    <li>
-                        <Link to="skills" smooth={true} duration={500}>Skills</Link>
-                    </li>
-                    <li>
-                        <Link to="contact" smooth={true} duration={500}>Contact</Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="header">
+      <nav className="nav">
+        <div className="logo">
+          <h2>Hello, I'm Joshua Quintanar</h2>
+        </div>
+        <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </div>
+        <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+          <li>
+            <Link to="about" smooth={true} duration={500} onClick={() => setIsOpen(false)}>About</Link>
+          </li>
+          <li>
+            <Link to="projects" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Projects</Link>
+          </li>
+          <li>
+            <Link to="skills" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Skills</Link>
+          </li>
+          <li>
+            <Link to="contact" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Contact</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
 
 export default Header;
