@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav">
         <div className="logo">
-            <img src='/images/logo/logo_top_2.gif' alt='logo-image' className='logo-img' />
+            <img src={process.env.PUBLIC_URL + '/images/logo/logo_top_2.gif'} alt='logo-image' className='logo-img' />
             <h2>Hello, I'm Joshua Quintanar</h2>
         </div>
         <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
