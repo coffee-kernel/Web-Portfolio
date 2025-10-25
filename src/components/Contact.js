@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser"; // New import
 import { FaCheck, FaExclamationTriangle } from "react-icons/fa"; // Optional: For success/error icons (install react-icons if needed: npm i react-icons)
 
@@ -15,6 +15,17 @@ const Contact = () => {
   const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
   const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+
+  // Log keys on mount (remove after fixing)
+  useEffect(() => {
+    console.log("EmailJS Config:", { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID });
+    if (PUBLIC_KEY) {
+      emailjs.init(PUBLIC_KEY); // Initialize here—required!
+      console.log("EmailJS initialized with key:", PUBLIC_KEY.substring(0, 10) + "..."); // Partial log for safety
+    } else {
+      console.error("Public key missing—check .env!");
+    }
+  }, [PUBLIC_KEY]); // Re-init if key changes (dev only)
 
   const handleChange = (e) => {
     setFormData({
