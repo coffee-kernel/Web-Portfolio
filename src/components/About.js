@@ -6,7 +6,7 @@ const About = () => {
       <div className="container">
         <h2>About Me</h2>
         <div className="about-content"> {/* New: Flex wrapper */}
-          <img src="/images/aboutme/about_me_avatar.png" alt="Profile" className="profile-img" />
+          <img src="images/aboutme/about_me_avatar.png" alt="Profile" className="profile-img" />
           <div className="about-text"> {/* New: Text wrapper */}
             <p>I'm a passionate developer with experience in React, JavaScript, and more. I love building interactive web apps that solve real problems.</p>
             <p>With a keen eye for user-centric design, I thrive on turning complex ideas into seamless, intuitive experiences that delight users and drive results. 
