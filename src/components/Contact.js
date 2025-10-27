@@ -97,7 +97,7 @@ const Contact = () => {
           </div>
         )}
 
-        <p>Or Email me @ <a href="mailto:joshuaquintanar17@gmail.com">joshuaquintanar17@gmail.com</a></p>
+        <p className="mailme">Or Email me @ <a href="mailto:joshuaquintanar17@gmail.com" className="emailadd">joshuaquintanar17@gmail.com</a></p>
       </div>
     </section>
   );

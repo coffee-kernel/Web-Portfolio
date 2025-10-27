@@ -7,9 +7,17 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="footer-content">
+                    {/* Legal links */}
+                    <div className="legal-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Terms of Service">Terms</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy">Privacy Policy</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Cookie Policy">Cookie Policy</a>
+                    </div>
+                    {/* all rights reserved */}
                     <div className="footer-text">
                         <p>&copy; 2025 All rights reserved.</p>
                     </div>
+                    {/* Social links */}
                     <div className="social-links">
                         <a href="https://github.com/coffee-kernel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <FaGithub />
@@ -21,6 +29,7 @@ const Footer = () => {
                         <FaFacebook />
                         </a>
                     </div>
+                    {/* Back to top */}
                     <Link to="about" smooth={true} duration={500} className="back-to-top">
                         <FaArrowUp /> Back to Top {/* Add icon before text */}
                     </Link>
