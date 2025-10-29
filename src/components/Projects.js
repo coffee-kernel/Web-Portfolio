@@ -32,6 +32,12 @@ const Projects = () => {
             link: 'https://github.com/coffee-kernel/basic-login-app.git',
             image: `${process.env.PUBLIC_URL}/images/projects/2.jpg`
         },
+        {
+            title: 'Trip Planning Agent',
+            description: 'Created basic Agentic AI for trip planning using Langchain',
+            link: 'https://github.com/coffee-kernel/Ollama-weather-agent.git',
+            image: `${process.env.PUBLIC_URL}/images/projects/7.jpg`
+        },
     ];
 
     return (
