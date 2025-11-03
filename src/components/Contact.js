@@ -18,12 +18,10 @@ const Contact = () => {
 
   // Log keys on mount (remove after fixing)
   useEffect(() => {
-    console.log("EmailJS Config:", { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID });
+    // console.log("EmailJS Config:", { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID });
     if (PUBLIC_KEY) {
       emailjs.init(PUBLIC_KEY); // Initialize here—required!
-      console.log("EmailJS initialized with key:", PUBLIC_KEY.substring(0, 10) + "..."); // Partial log for safety
-    } else {
-      console.error("Public key missing—check .env!");
+      // console.log("EmailJS initialized with key:", PUBLIC_KEY.substring(0, 10) + "..."); // Partial log for safety
     }
   }, [PUBLIC_KEY]); // Re-init if key changes (dev only)
 
